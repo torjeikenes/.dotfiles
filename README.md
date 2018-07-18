@@ -11,6 +11,9 @@ dotfiles
 
 ## Installation
 
+### Install dotfiles
+
+https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 
 ```
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
@@ -43,3 +46,8 @@ config add .bashrc
 config commit -m "Add bashrc"
 config push
 ```
+
+### Other installations 
+
+* Install YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
+* 

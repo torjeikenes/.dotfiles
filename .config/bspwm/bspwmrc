@@ -47,7 +47,7 @@ wmname LG3D &
 
 
 #xautolock -time 10 -locker "/usr/local/bin/lock" -detectsleep & 
-xautolock -time 10 -locker "/home/torje/xkcd-lock/xkcd-lock" -detectsleep & 
+xautolock -time 10 -locker "/usr/local/bin/betterlockscreen" -detectsleep & 
 xinput set-prop 14 266 2.5 &
 
 killall -q notify-osd &

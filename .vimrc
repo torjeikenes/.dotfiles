@@ -19,27 +19,18 @@ Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
 Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'lifepillar/vim-solarized8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'terryma/vim-expand-region'
 Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'vimwiki/vimwiki'
-Plugin 'rking/ag.vim'
-Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-notes'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'junegunn/goyo.vim'
 Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'sheerun/vim-polyglot'
-Plugin 'joshdick/onedark.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
@@ -48,10 +39,8 @@ Plugin 'jplaut/vim-arduino-ino'
 Plugin 'dhruvasagar/vim-table-mode'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
-Plugin 'morhetz/gruvbox'
 Plugin 'vim-pencil'
 Plugin 'suan/vim-instant-markdown'
-Plugin 'arcticicestudio/nord-vim'
 Plugin 'aperezdc/vim-template'
 Plugin 'fmoralesc/vim-pad'
 Plugin 'ap/vim-css-color'
@@ -97,6 +86,12 @@ au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
 au! BufRead,BufNewFile *.markdown set filetype=mkd
 au! BufRead,BufNewFile *.md       set filetype=mkd
+
+hi clear SpellBad
+hi SpellBad cterm=underline
+
+hi clear SpellCap
+hi SpellCap cterm=underline
 
 " }}} 
 " Cursor {{{

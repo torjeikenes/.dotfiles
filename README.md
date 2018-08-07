@@ -1,12 +1,14 @@
 # .dotfiles
  
-dotfiles
 
 * bspwm
 * polybar
 * zsh
 * vim
 
+## Programs
+
+* https://github.com/multiplexd/brightlight
 
 
 ## Installation

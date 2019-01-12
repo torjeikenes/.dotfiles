@@ -180,11 +180,11 @@ XF86AudioMute
 
 # Higher brightness
 XF86MonBrightnessUp
-    $HOME/bin/brightlight -p -i 10
+    $HOME/bin/brightlight -p -i 5
 
 # Lower Brightness
 XF86MonBrightnessDown
-    $HOME/bin/brightlight -p -d 10
+    $HOME/bin/brightlight -p -d 5
 
 #Layout malipulation
 

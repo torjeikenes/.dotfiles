@@ -241,5 +241,10 @@
 #    appname = Pidgin
 #    summary = *twitter.com*
 #    urgency = normal
+
+[spotify]
+    appname = *Spotify*
+    new_icon = spotify-client
+
 #
 # vim: ft=cfg

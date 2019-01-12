@@ -14,8 +14,8 @@
 $HOME/bin/bspwm_workspces.sh &
 
 bspc config border_width         2
-bspc config window_gap          15
-bspc config top_padding         15
+bspc config window_gap          10
+bspc config top_padding         10
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -47,8 +47,8 @@ wmname LG3D &
 
 
 #xautolock -time 10 -locker "/usr/local/bin/lock" -detectsleep & 
-xautolock -time 10 -locker "/usr/local/bin/betterlockscreen" -detectsleep & 
-xinput set-prop 14 266 2.5 &
+xautolock -time 10 -locker "/usr/local/bin/betterlockscreen -l" -detectsleep & 
+#xinput set-prop 14 266 2.5 &
 
 killall -q notify-osd &
 dunst -config ~/.config/dunstrc &

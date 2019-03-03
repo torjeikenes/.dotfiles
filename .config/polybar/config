@@ -42,6 +42,7 @@ height = 26
 offset-x = 10
 offset-y = 10
 
+
 ;background = ${xrdb:color9}
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -75,7 +76,7 @@ tray-padding = 2
 ;tray-transparent = true
 ;tray-background = #0063ff
 
-;wm-restack = bspwm
+wm-restack = bspwm
 ;wm-restack = i3
 
 ;override-redirect = true

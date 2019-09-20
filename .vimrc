@@ -46,6 +46,8 @@ Plugin 'fmoralesc/vim-pad'
 Plugin 'ap/vim-css-color'
 Plugin 'morganp/vim-projector'
 Plugin 'chriskempson/base16-vim'
+Plugin 'vimwiki/vimwiki'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -84,8 +86,8 @@ set background=dark
 
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
-au! BufRead,BufNewFile *.markdown set filetype=mkd
-au! BufRead,BufNewFile *.md       set filetype=mkd
+"au! BufRead,BufNewFile *.markdown set filetype=mkd
+"au! BufRead,BufNewFile *.md       set filetype=mkd
 
 hi clear SpellBad
 hi SpellBad cterm=underline

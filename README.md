@@ -54,7 +54,7 @@ config push
 * zsh
 * rofi
 * oh-my-zsh
-* base16
+* base16 https://github.com/chriskempson/base16-shell (tommorrow_night)
 * Fantasquesans font
 * better-lockscreen
 

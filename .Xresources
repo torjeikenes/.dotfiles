@@ -148,25 +148,25 @@ Xft.hintstyle:              hintslight
 
 URxvt*scrollBar:	false 
 
-! Base16 Default Dark
-! Scheme: Chris Kempson (http://chriskempson.com)
-
-define base00 #181818
-define base01 #282828
-define base02 #383838
-define base03 #585858
-define base04 #b8b8b8
-define base05 #d8d8d8
-define base06 #e8e8e8
-define base07 #f8f8f8
-define base08 #ab4642
-define base09 #dc9656
-define base0A #f7ca88
-define base0B #a1b56c
-define base0C #86c1b9
-define base0D #7cafc2
-define base0E #ba8baf
-define base0F #a16946
+!! Base16 Default Dark
+!! Scheme: Chris Kempson (http://chriskempson.com)
+!
+!define base00 #181818
+!define base01 #282828
+!define base02 #383838
+!define base03 #585858
+!define base04 #b8b8b8
+!define base05 #d8d8d8
+!define base06 #e8e8e8
+!define base07 #f8f8f8
+!define base08 #ab4642
+!define base09 #dc9656
+!define base0A #f7ca88
+!define base0B #a1b56c
+!define base0C #86c1b9
+!define base0D #7cafc2
+!define base0E #ba8baf
+!define base0F #a16946
 
 URxvt*foreground:   base05
 #ifdef background_opacity
@@ -203,3 +203,22 @@ URxvt*color19:      base02
 URxvt*color20:      base04
 URxvt*color21:      base06
 
+!urxvt*foreground: white
+!urxvt*background: black
+!
+!*color0:  #2E3436
+!*color1:  #a40000
+!*color2:  #4E9A06
+!*color3:  #C4A000
+!*color4:  #3465A4
+!*color5:  #75507B
+!*color6:  #ce5c00
+!*color7:  #babdb9
+!*color8:  #555753
+!*color9:  #EF2929
+!*color10: #8AE234
+!*color11: #FCE94F
+!*color12: #729FCF
+!*color13: #AD7FA8
+!*color14: #fcaf3e
+!*color15: #EEEEEC

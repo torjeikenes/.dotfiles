@@ -2,7 +2,7 @@
 
 
 #if (xrandr | grep "HDMI1 connected" > /dev/null)
-#then
+
 #	mons -e right &
 #	bspc monitor HDMI1 -d 1 2 3 4 5 
 #	bspc monitor eDP1 -d 6 7 8 9 10
@@ -11,7 +11,9 @@
 #    bspc monitor DP1 -d 10
 #fi
 
+
 $HOME/bin/bspwm_workspces.sh &
+base16-manager set tomorrow-night &
 
 bspc config border_width         2
 bspc config window_gap          10
@@ -24,6 +26,7 @@ bspc config focus_follows_pointer true
 
 bspc rule -a Gimp desktop='5' state=floating follow=on
 bspc rule -a google-chrome desktop='2'
+bspc rule -a chromium-browser desktop='2'
 bspc rule -a Spotify desktop='9'
 bspc rule -a Slack desktop='8'
 #bspc rule -a libreoffice desktop='4'
@@ -49,10 +52,13 @@ wmname LG3D &
 #xautolock -time 10 -locker "/usr/local/bin/lock" -detectsleep & 
 xautolock -time 10 -locker "/usr/local/bin/betterlockscreen -l" -detectsleep & 
 #xinput set-prop 14 266 2.5 &
+xinput set-prop 12 291 1
+xinput set-prop 12 301 1
 
 killall -q notify-osd &
 dunst -config ~/.config/dunstrc &
 dropbox start &
+#~/.dropbox-dist/dropboxd &
 
 
 $HOME/bin/moveWindow.sh &

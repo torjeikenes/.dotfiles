@@ -9,6 +9,7 @@
 ## Programs
 
 * https://github.com/multiplexd/brightlight
+    * https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 
 
 ## Installation

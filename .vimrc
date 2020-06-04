@@ -33,7 +33,7 @@ Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
+" Plugin 'garbas/vim-snipmate'
 Plugin 'alvan/vim-closetag'
 Plugin 'jplaut/vim-arduino-ino'
 Plugin 'dhruvasagar/vim-table-mode'
@@ -50,6 +50,8 @@ Plugin 'vimwiki/vimwiki'
 Plugin 'lervag/vimtex'
 Plugin 'SirVer/ultisnips'
 Plugin 'stevearc/vim-arduino'
+Plugin 'honza/vim-snippets'
+Plugin 'ervandew/supertab'
 
 
     " All of your Plugins must be added before the following line
@@ -295,7 +297,23 @@ Plugin 'stevearc/vim-arduino'
 
     " }}}
     " Ultisnips{{{
-    let g:UltiSnipsExpandTrigger = '<tab>'
-    let g:UltiSnipsJumpForwardTrigger = '<tab>'
-    let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+    " let g:UltiSnipsExpandTrigger = '<tab>'
+    " let g:UltiSnipsJumpForwardTrigger = '<tab>'
+    " let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
+    "let g:UltiSnipsExpandTrigger="<leader>s"
+    "let g:UltiSnipsJumpForwardTrigger="<c-b>"
+    "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+    
+    " make YCM compatible with UltiSnips (using supertab)
+    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+    let g:SuperTabDefaultCompletionType = '<C-n>'
+
+    " better key bindings for UltiSnipsExpandTrigger
+    let g:UltiSnipsExpandTrigger = "<tab>"
+    let g:UltiSnipsJumpForwardTrigger = "<tab>"
+    let g:UltiSnipsJumpBackwardTrigger = "<leader>k"
+
+    let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips/UltiSnips"
+    let g:UltiSnipsEditSplit="vertical"
     " }}}

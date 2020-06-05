@@ -453,6 +453,7 @@ if [ -e /etc/motd ]; then
 fi
 
 export PATH="$PATH:$HOME/miniconda3/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 
 # >>> conda initialize >>>

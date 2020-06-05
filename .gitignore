@@ -1,6 +1,9 @@
-*
+# Ignore everything
+/*
+
 !.gitignore
 
+# Vim
 # Swap
 [._]*.s[a-v][a-z]
 !*.svg  # comment out if you don't need vector files
@@ -22,13 +25,15 @@ tags
 [._]*.un~
 
 # snippets
-!/.vim/ultisnips/UltiSnips
+#
+!.vim/
+.vim/*
+!.vim/ultisnips/
+!.vim/ultisnips/UltiSnips/
 
 #bin 
-!/bin
+!bin/
 
-!/.config
-
-!/.zsh
+!.zsh/
 
 

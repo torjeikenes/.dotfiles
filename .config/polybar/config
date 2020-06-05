@@ -36,7 +36,7 @@ margin-bottom = 5
 
 [bar/top]
 ;monitor = ${env:MONITOR}
-monitor = eDP-1
+monitor = eDP1
 width = 1580
 height = 26
 offset-x = 10
@@ -89,7 +89,7 @@ wm-restack = bspwm
 
 [bar/top1]
 ;monitor = ${env:MONITOR}
-monitor = HDMI-1
+monitor = HDMI1
 width = 1900
 height = 26
 offset-x = 10

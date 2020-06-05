@@ -1,5 +1,7 @@
 #! /bin/sh
 
+# Launch sxhkd
+sxhkd &
 
 #if (xrandr | grep "HDMI1 connected" > /dev/null)
 

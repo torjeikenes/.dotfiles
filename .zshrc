@@ -7,7 +7,7 @@ export ZSH=/home/torje/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="norm"
+#ZSH_THEME="norm"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -91,7 +91,6 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin
 alias -g peder="eog -f peder.gif"
 
-export PATH=$PATH:$HOME/bin
 # Enable Ctrl-x-e to edit command line
 autoload -U edit-command-line
 # Emacs style
@@ -101,7 +100,7 @@ bindkey '^x^e' edit-command-line
 # Vi style:
 # zle -N edit-command-line
 # bindkey -M vicmd v edit-command-line
-export WORKSPACE=`git rev-parse --show-toplevel`
+#export WORKSPACE=`git rev-parse --show-toplevel`
 export PATH="${WORKSPACE}/tools/run_in_test}/bin:${PATH}"
 export PYTHONPATH="${WORKSPACE}/tools/run_in_test:${PYTHONPATH}"
 export PATH="${WORKSPACE}/tools/minicamutils}/bin:${PATH}"
@@ -112,50 +111,12 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 
 
-#
-# Teh H4xx
-#
 
-if [ "$(uname)" = "Darwin" ]; then
-  # Suppress unwanted Homebrew-installed stuff.
-  if [ -e /usr/local/share/zsh/site-functions/_git ]; then
-    mv -f /usr/local/share/zsh/site-functions/{,disabled.}_git
-  fi
-fi
+
 
 #
-# Completion
-#
-
-fpath=($HOME/.zsh/completions $fpath)
-
-autoload -U compinit
-compinit -u
-
-# Make completion:
-# - Case-insensitive.
-# - Accept abbreviations after . or _ or - (ie. f.b -> foo.bar).
-# - Substring complete (ie. bar -> foobar).
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
-
-# Colorize completions using default `ls` colors.
-zstyle ':completion:*' list-colors ''
-
-#
-# Correction
-#
-
-# exceptions to auto-correction
-alias bundle='nocorrect bundle'
-alias cabal='nocorrect cabal'
-alias man='nocorrect man'
-alias mkdir='nocorrect mkdir'
-alias mv='nocorrect mv'
-alias stack='nocorrect stack'
-alias sudo='nocorrect sudo'
-
-#
-# Prompt
+# Prompt 
+# Stolen from https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zshrc
 #
 
 autoload -U colors
@@ -238,6 +199,7 @@ export SPROMPT="zsh: correct %F{red}'%R'%f to %F{red}'%r'%f [%B%Uy%u%bes, %B%Un%
 
 #
 # History
+# Stolen from https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zshrc
 #
 
 export HISTSIZE=100000
@@ -246,6 +208,7 @@ export SAVEHIST=$HISTSIZE
 
 #
 # Options
+# Stolen from https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zshrc
 #
 
 setopt autocd               # .. is shortcut for cd .. (etc)
@@ -268,6 +231,7 @@ setopt sharehistory         # share history across shells
 
 #
 # Bindings
+# Stolen from https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zshrc
 #
 
 bindkey -e # emacs bindings, set to -v for vi bindings
@@ -305,29 +269,16 @@ bindkey '^Z' fg-bg
 
 #
 # Other
+# Stolen from https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zshrc
 #
 
 source $HOME/.zsh/aliases
 source $HOME/.zsh/colors
-# source $HOME/.zsh/common
-#source $HOME/.zsh/exports
-#source $HOME/.zsh/functions
-#source $HOME/.zsh/hash
-#source $HOME/.zsh/path
-#source $HOME/.zsh/vars
 
-test -e $HOME/.zsh/functions.private && source $HOME/.zsh/functions.private
-
-#
-# Third-party
-#
-
-CHRUBY=/usr/local/share/chruby
-test -e "$CHRUBY/chruby.sh" && . "$CHRUBY/chruby.sh"
-test -e "$CHRUBY/auto.sh" && . "$CHRUBY/auto.sh"
 
 #
 # Hooks
+# Stolen from https://github.com/wincent/wincent/blob/master/aspects/dotfiles/files/.zshrc
 #
 
 autoload -U add-zsh-hook
@@ -419,25 +370,13 @@ zstyle ':completion:*:*:cdr:*:*' menu selection
 # fall through to cd if cdr is passed a non-recent dir as an argument
 zstyle ':chpwd:*' recent-dirs-default true
 
-# Local and host-specific overrides.
-
-DEV_RC=$HOME/.zsh/host/dev-star
-if [ $(hostname -s) =~ '^dev(vm)?[[:digit:]]+' ]; then
-  test -f $DEV_RC && source $DEV_RC
-fi
-
-HOST_RC=$HOME/.zsh/host/$(hostname -s)
-test -f $HOST_RC && source $HOST_RC
-
-LOCAL_RC=$HOME/.zshrc.local
-test -f $LOCAL_RC && source $LOCAL_RC
 
 #
 # Plug-ins
 #
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'
+#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'
 
 # Uncomment this to get syntax highlighting:
 # source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -446,28 +385,8 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=59'
 # /etc/motd
 #
 
-if [ -e /etc/motd ]; then
-  if ! cmp -s $HOME/.hushlogin /etc/motd; then
-    tee $HOME/.hushlogin < /etc/motd
-  fi
-fi
 
-export PATH="$PATH:$HOME/miniconda3/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH=$PATH:$HOME/bin
 
-
-# >>> conda initialize >>>
-## !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/home/torje/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/home/torje/miniconda3/etc/profile.d/conda.sh" ]; then
-#        . "/home/torje/miniconda3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/home/torje/miniconda3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-## <<< conda initialize <<<
 

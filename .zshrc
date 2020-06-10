@@ -289,7 +289,6 @@ zstyle ':completion:*:*:cdr:*:*' menu selection
 zstyle ':chpwd:*' recent-dirs-default true
 
 
-
 #
 # Export Paths
 #

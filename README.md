@@ -73,3 +73,9 @@ cd polybar && ./build.sh
 ```
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
+
+### TODO
+
+* clean up base16 stuff
+* fix desktop opening in regolith
+* fix i3bar in regolith

@@ -3,5 +3,8 @@
     "editor.lineNumbers": "relative",
     "git.autofetch": true,
     "workbench.colorTheme": "One Dark Pro",
-    "editor.rulers": [80]
+    "editor.rulers": [
+        80
+    ],
+    "python.defaultInterpreterPath": "/usr/bin/python3"
 }

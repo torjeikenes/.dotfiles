@@ -35,5 +35,7 @@ tags
 !bin/
 
 !.zsh/
+!.config/Code/User/settings.json
+
 
 

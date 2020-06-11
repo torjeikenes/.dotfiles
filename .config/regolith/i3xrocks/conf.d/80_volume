@@ -1,0 +1,6 @@
+# volume
+#
+# Display Volume
+[volume]
+full_text=Bt
+interval=1

@@ -1,6 +1,5 @@
 # Ignore everything
 /*
-
 !.gitignore
 
 # Vim
@@ -36,6 +35,12 @@ tags
 
 !.zsh/
 !.config/Code/User/settings.json
+
+!/.config/
+/.config/*
+!/.config/regolith/
+/.config/regolith/*
+!/.config/regolith/i3xrocks/
 
 
 

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+VALUE_COLOR=${color:-$(xrescat i3xrocks.value.color)}
+VALUE_FONT=${font:-$(xrescat i3xrocks.value.font)}
+
+PANGO_START="<span color=\"${VALUE_COLOR}\" font_desc=\"${VALUE_FONT}\">"
+PANGO_END="</span>"
+
+XKB=($(setxkbmap -query | awk '
+    BEGIN{layout="";variant=""}
+    /^layout/{layout=$2}
+    /^variant/{variant=" ("$2")"}
+    END{printf("%s%s",layout,variant)}'))
+
+
+echo $PANGO_START ${XKB} $PANGO_END
+

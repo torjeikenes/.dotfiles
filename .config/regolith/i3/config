@@ -40,21 +40,10 @@
 ###############################################################################
 #
 
-exec "setxkbmap -option altwin:swap_alt_win"
 set_from_resource $mod  i3-wm.mod Mod4
 set_from_resource $alt  i3-wm.alt Mod1
 
 
-###############################################################################
-# Volume and Brightness
-###############################################################################
-
-bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
-
-bindsym XF86MonBrightnessUp exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 
 
 ###############################################################################
@@ -399,7 +388,6 @@ bindsym $mod+r mode "Resize Mode"
 bindsym $alt+n exec setxkbmap no
 bindsym $alt+u exec setxkbmap us
 
-
 ###############################################################################
 # i3 Appearance and Behavior
 ###############################################################################
@@ -556,7 +544,7 @@ set_from_resource $i3-wm.program.3 i3-wm.program.3 :
 exec --no-startup-id $i3-wm.program.3
 
 ################################################################################
-## Autostart
+## Custom stuff
 ################################################################################
 ##
 ##exec --no-startup-id i3-msg 'workspace 2; exec google-chrome; workspace 1; exec urxvt; workspace 9; exec spotify; workspace 2'
@@ -568,4 +556,16 @@ exec  --no-startup-id spotify
 for_window [class="Spotify"] move to workspace $ws9
 for_window [class="Google-chrome"] move to workspace $ws2
 
+exec "setxkbmap -option altwin:swap_alt_win"
+
+###############################################################################
+# Volume and Brightness
+###############################################################################
+
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 

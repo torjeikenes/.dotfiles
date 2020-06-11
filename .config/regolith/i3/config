@@ -39,19 +39,11 @@
 # Alt key is Mod1, and Windows key is Mod4
 ###############################################################################
 #
-#exec google-chrome
-#exec urxvt
-#exec "setxkbmap -option 'grp:alt_shift_toggle'"
 
 exec "setxkbmap -option altwin:swap_alt_win"
 set_from_resource $mod  i3-wm.mod Mod4
 set_from_resource $alt  i3-wm.alt Mod1
 
-###############################################################################
-# Autostart
-###############################################################################
-#
-#exec --no-startup-id i3-msg 'workspace 2; exec google-chrome; workspace 1; exec urxvt; workspace 9; exec spotify; workspace 2'
 
 ###############################################################################
 # Volume and Brightness

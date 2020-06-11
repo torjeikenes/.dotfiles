@@ -90,12 +90,20 @@ function () {
   if [[ -n "$TMUX" ]]; then
     local LVL=$(($SHLVL - 1))
   else
-    local LVL=$SHLVL
+    local LVL=$SHLVL-1
   fi
+  # $ Suffix
+  #if [[ $EUID -eq 0 ]]; then
+  #  local SUFFIX=$(printf '#%.0s' {1..$LVL})
+  #else
+  #  local SUFFIX=$(printf '\$%.0s' {1..$LVL})
+  #fi
+
+  # > suffix
   if [[ $EUID -eq 0 ]]; then
-    local SUFFIX=$(printf '#%.0s' {1..$LVL})
+    local SUFFIX='%F{yellow}%n%f'$(printf '%%F{yellow}\u276f%.0s%%f' {1..$LVL})
   else
-    local SUFFIX=$(printf '\$%.0s' {1..$LVL})
+    local SUFFIX=$(printf '%%F{red}\u276f%.0s%%f' {1..$LVL})
   fi
   if [[ -n "$TMUX" ]]; then
     # Note use a non-breaking space at the end of the prompt because we can use it as

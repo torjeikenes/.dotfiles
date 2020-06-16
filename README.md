@@ -1,15 +1,14 @@
-# .dotfiles
- 
+# Dotfiles
 
-* bspwm
-* polybar
+* Regolith 
+* bspwm(not in use atm)
+* polybar(not in use atm)
 * zsh
 * vim
+* urxvt
+* vscode
 
-## Programs
 
-* https://github.com/multiplexd/brightlight
-    * https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 
 
 ## Installation
@@ -51,12 +50,16 @@ config push
 ```
 
 ### Other installations 
+* regolith
 * vim
 * zsh
 * rofi
 * oh-my-zsh
+* YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
 * base16 https://github.com/chriskempson/base16-shell (tommorrow_night)
-* Fantasquesans font
+* https://github.com/multiplexd/brightlight
+    * https://unix.stackexchange.com/questions/301724/xbacklight-not-working
+* Iosevka font
 * better-lockscreen
 
 ### polybar
@@ -68,8 +71,7 @@ git clone https://github.com/jaagr/polybar.git
 cd polybar && ./build.sh
 ```
 
-* Install YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
-* Install base16
+
 ```
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```

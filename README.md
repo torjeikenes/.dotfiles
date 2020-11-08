@@ -10,10 +10,17 @@
 
 
 
-
 ## Installation
 
+
 ### Install dotfiles
+
+Install the following
+
+* regolith
+* vim
+* zsh
+* oh-my-zsh
 
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 
@@ -49,18 +56,25 @@ config commit -m "Add bashrc"
 config push
 ```
 
+```sudo update-alternatives --config x-terminal-emulator```
+
+```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
+```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
+
+```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
+
+in vim:
+
+```:PluginInstall ```
+
 ### Other installations 
-* regolith
-* vim
-* zsh
-* rofi
-* oh-my-zsh
 * YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
 * base16 https://github.com/chriskempson/base16-shell (tommorrow_night)
 * https://github.com/multiplexd/brightlight
     * https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 * Iosevka font
 * better-lockscreen
+* xbacklight https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 
 ### polybar
 ```

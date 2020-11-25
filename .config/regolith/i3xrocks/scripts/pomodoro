@@ -12,5 +12,5 @@ XKB=$(pomodoro -c)
 echo $PANGO_START ${XKB} $PANGO_END
 
 if [ ! -z "$button" ]; then
-   pomodoro -p 
+   pomodoro -n
 fi

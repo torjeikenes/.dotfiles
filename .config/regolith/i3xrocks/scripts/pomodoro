@@ -1,0 +1,16 @@
+#!/bin/bash
+
+VALUE_COLOR=${color:-$(xrescat i3xrocks.value.color)}
+VALUE_FONT=${font:-$(xrescat i3xrocks.value.font)}
+
+PANGO_START="<span color=\"${VALUE_COLOR}\" font_desc=\"${VALUE_FONT}\">"
+PANGO_END="</span>"
+
+XKB=$(pomodoro -c)
+
+
+echo $PANGO_START ${XKB} $PANGO_END
+
+if [ ! -z "$button" ]; then
+   pomodoro -p 
+fi

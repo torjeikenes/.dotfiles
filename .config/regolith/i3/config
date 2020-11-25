@@ -548,13 +548,15 @@ exec --no-startup-id $i3-wm.program.3
 ################################################################################
 ##
 ##exec --no-startup-id i3-msg 'workspace 2; exec google-chrome; workspace 1; exec urxvt; workspace 9; exec spotify; workspace 2'
-exec  --no-startup-id google-chrome
+#exec  --no-startup-id google-chrome
+exec  --no-startup-id chromium
 ##exec urxvt
 exec  --no-startup-id spotify
 ##exec "setxkbmap -option 'grp:alt_shift_toggle'"
 #
 for_window [class="Spotify"] move to workspace $ws9
-for_window [class="Google-chrome"] move to workspace $ws2
+#for_window [class="Google-chrome"] move to workspace $ws2
+for_window [class="chromium"] move to workspace $ws2
 
 exec "setxkbmap -option altwin:swap_alt_win"
 

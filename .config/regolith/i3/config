@@ -40,11 +40,8 @@
 ###############################################################################
 #
 
-set_from_resource $mod  i3-wm.mod Mod4
-set_from_resource $alt  i3-wm.alt Mod1
-
-
-
+set $mod Mod4
+set $alt Mod1
 
 ###############################################################################
 # Workspace Names
@@ -558,7 +555,7 @@ for_window [class="Spotify"] move to workspace $ws9
 #for_window [class="Google-chrome"] move to workspace $ws2
 for_window [class="chromium"] move to workspace $ws2
 
-exec "setxkbmap -option altwin:swap_alt_win"
+#exec "setxkbmap -option altwin:swap_alt_win"
 
 ###############################################################################
 # Volume and Brightness

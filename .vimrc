@@ -294,6 +294,7 @@ Plugin 'ervandew/supertab'
     let g:vimtex_quickfix_mode=0
     set conceallevel=1
     let g:tex_conceal='abdmg'
+    let g:vimtex_latexmk_options='-output-directory=build'
 
     " }}}
     " Ultisnips{{{

@@ -15,6 +15,7 @@
 
 ### Install dotfiles
 
+
 Install the following
 
 * regolith
@@ -75,6 +76,11 @@ in vim:
 * Iosevka font
 * better-lockscreen
 * xbacklight https://unix.stackexchange.com/questions/301724/xbacklight-not-working
+
+### pop os setup
+run 'bash popOsKeybindings.sh'
+in keybindings change launch terminal and disable "launch and switch applications"
+
 
 ### polybar
 ```

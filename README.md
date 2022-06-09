@@ -18,7 +18,6 @@
 
 Install the following
 
-* regolith
 * vim
 * zsh
 * oh-my-zsh
@@ -57,9 +56,11 @@ config commit -m "Add bashrc"
 config push
 ```
 
-```sudo update-alternatives --config x-terminal-emulator```
+### Setup terminal
+
 
 ```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
+
 ```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
 
 ```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
@@ -67,6 +68,7 @@ config push
 in vim:
 
 ```:PluginInstall ```
+
 
 ### Other installations 
 * YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
@@ -96,7 +98,3 @@ cd polybar && ./build.sh
 git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
 ```
 
-### TODO
-
-* clean up base16 stuff
-* fix desktop opening in regolith

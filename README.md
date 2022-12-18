@@ -127,6 +127,7 @@ setup keybinds
 
 ### Settings
 
+* Change to fixed number of workspaces
 * in keybindings change launch terminal to `ctrl + enter` and disable "launch and switch applications"
 * Change wallpaper
 * Set to Nordic theme
@@ -146,3 +147,4 @@ setup keybinds
 * sound percentage
 * vitals
 * workspaces bar
+* Dash to panel

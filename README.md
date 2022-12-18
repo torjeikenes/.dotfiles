@@ -1,26 +1,35 @@
 # Dotfiles
 
-* Regolith 
-* bspwm(not in use atm)
-* polybar(not in use atm)
+* pop os
 * zsh
 * vim
-* urxvt
 * vscode
 
 
 
 ## Installation
 
+### Basic setup
 
-### Install dotfiles
+```hostnamectl set-hostname <NAME>````
 
+### Updates
 
-Install the following
+```
+sudo apt update
+sudo apt upgrade
+sudo apt dist-upgrade
+sudo apt autoremove
+sudo apt autoclean
+sudo fwupdmgr get-devices
+sudo fwupdmgr get-updates
+sudo fwupdmgr update
+flatpak update
+sudo reboot now
+```
 
-* vim
-* zsh
-* oh-my-zsh
+## Install dotfiles
+
 
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 
@@ -58,43 +67,75 @@ config push
 
 ### Setup terminal
 
+```sudo apt install zsh```
+
+```chsh -s $(which zsh)```
+
+log out and back in
+
+```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
 
 ```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
 
 ```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
 
+
 ```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
+
+```sudo apt install vim```
 
 in vim:
 
 ```:PluginInstall ```
 
 
-### Other installations 
+
+## Other installations 
+```sudo apt install gnome-tweaks```
+
+Vscode
+```sudo apt install -y code```
+
+```sudo apt install -y vlc```
+
 * YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
 * base16 https://github.com/chriskempson/base16-shell (tommorrow_night)
 * https://github.com/multiplexd/brightlight
     * https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 * Iosevka font
-* better-lockscreen
 * xbacklight https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 
-### pop os setup
-run 'bash popOsKeybindings.sh'
-in keybindings change launch terminal and disable "launch and switch applications"
+####Flatpack
+
+Dropbox
+spotify
+extension manager
 
 
-### polybar
-```
-sudo apt-get install cmake cmake-data libcairo2-dev libxcb1-dev libxcb-ewmh-dev libxcb-icccm4-dev libxcb-image0-dev libxcb-randr0-dev libxcb-util0-dev libxcb-xkb-dev pkg-config python-xcbgen xcb-proto libxcb-xrm-dev i3-wm libasound2-dev libmpdclient-dev libiw-dev libcurl4-openssl-dev libpulse-dev libxcb-composite0-dev xcb libxcb-ewmh2
+## pop os setup
 
-git clone https://github.com/jaagr/polybar.git
+setup keybinds
 
-cd polybar && ./build.sh
-```
+```bash popOsKeybindings.sh```
+
+in keybindings change launch terminal to `ctrl + enter` and disable "launch and switch applications"
 
 
-```
-git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell
-```
+* Change wallpaper
+* Set to Nordic theme
+* Automatically delete recent files and trash
+* Set screen of time
+* Set up night mode
+* Set mouse settings
+* Set 24 h format
 
+
+## Extensions
+
+* user themes
+* Auto move windows
+* just perfection
+* sound output device chooser
+* sound percentage
+* vitals
+* workspaces bar

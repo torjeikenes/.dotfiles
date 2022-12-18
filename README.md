@@ -11,7 +11,7 @@
 
 ### Basic setup
 
-```hostnamectl set-hostname <NAME>````
+```hostnamectl set-hostname <NAME>```
 
 ### Updates
 
@@ -27,6 +27,20 @@ sudo fwupdmgr update
 flatpak update
 sudo reboot now
 ```
+
+### Setup terminal
+
+```sudo apt install zsh```
+
+```chsh -s $(which zsh)```
+
+log out and back in
+
+```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+
+```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
+
+```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
 
 ## Install dotfiles
 
@@ -65,51 +79,43 @@ config commit -m "Add bashrc"
 config push
 ```
 
-### Setup terminal
-
-```sudo apt install zsh```
-
-```chsh -s $(which zsh)```
-
-log out and back in
-
-```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-
-```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
-
-```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
+#### Setup vim
 
 
 ```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
 
 ```sudo apt install vim```
 
+
 in vim:
 
 ```:PluginInstall ```
 
+* YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
+
 
 
 ## Other installations 
+Tweak tools
+
 ```sudo apt install gnome-tweaks```
 
 Vscode
+
 ```sudo apt install -y code```
+VLC
 
 ```sudo apt install -y vlc```
 
-* YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
-* base16 https://github.com/chriskempson/base16-shell (tommorrow_night)
-* https://github.com/multiplexd/brightlight
-    * https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 * Iosevka font
-* xbacklight https://unix.stackexchange.com/questions/301724/xbacklight-not-working
 
-####Flatpack
 
-Dropbox
-spotify
-extension manager
+
+### Flatpack
+
+* Dropbox
+* spotify
+* extension manager
 
 
 ## pop os setup
@@ -118,9 +124,10 @@ setup keybinds
 
 ```bash popOsKeybindings.sh```
 
-in keybindings change launch terminal to `ctrl + enter` and disable "launch and switch applications"
 
+### Settings
 
+* in keybindings change launch terminal to `ctrl + enter` and disable "launch and switch applications"
 * Change wallpaper
 * Set to Nordic theme
 * Automatically delete recent files and trash

@@ -109,6 +109,17 @@ VLC
 
 * Iosevka font
 
+* Ulauncher
+
+```
+sudo add-apt-repository ppa:agornostal/ulauncher
+sudo apt update
+sudo apt install ulauncher
+```
+
+```sudo apt install fzf```
+
+```pip install pint```
 
 
 ### Flatpack
@@ -137,6 +148,11 @@ setup keybinds
 * Set mouse settings
 * Set 24 h format
 
+### Tweaks
+
+* Add week numbers to calendar
+* Set theme
+* Set startup applications
 
 ## Extensions
 

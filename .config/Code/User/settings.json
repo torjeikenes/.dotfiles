@@ -7,6 +7,6 @@
         80
     ],
     "python.defaultInterpreterPath": "/usr/bin/python3",
-    "window.zoomLevel": 0,
-    "verilog.linting.linter": "iverilog"
+    "verilog.linting.linter": "iverilog",
+    "editor.formatOnSave": true
 }

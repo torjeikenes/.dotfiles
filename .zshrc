@@ -308,3 +308,12 @@ export PATH=$PATH:/usr/local/go/bin
 export CDPATH=.:~/Dropbox/skole/H20/
 export PATH=~/eda/bin:$PATH
 
+
+export QSYS_ROOTDIR="/home/torje/intelFPGA/22.1std/quartus/sopc_builder/bin"
+export LM_LICENSE_FILE="/home/torje/intelFPGA/22.1std/licenses/LR-108425_License.dat"
+export MGLS_LICENSE_FILE="/home/torje/intelFPGA/22.1std/licenses/LR-108425_License.dat"
+export PATH=$PATH:$HOME/intelFPGA/22.1std/questa_fse/bin/
+export PATH=$PATH:/opt/gcc-arm-none-eabi/bin
+export PATH=$PATH:/opt/SEGGER
+export PATH=$PATH:/snap/bin
+

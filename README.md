@@ -28,20 +28,6 @@ flatpak update
 sudo reboot now
 ```
 
-### Setup terminal
-
-```sudo apt install zsh```
-
-```chsh -s $(which zsh)```
-
-log out and back in
-
-```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-
-```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
-
-```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
-
 ## Install dotfiles
 
 
@@ -79,6 +65,21 @@ config commit -m "Add bashrc"
 config push
 ```
 
+### Setup terminal
+
+```sudo apt install zsh```
+
+```chsh -s $(which zsh)```
+
+log out and back in
+
+```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+
+```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
+
+```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
+
+
 #### Setup vim
 
 
@@ -96,6 +97,7 @@ in vim:
 
 
 ## Other installations 
+
 Tweak tools
 
 ```sudo apt install gnome-tweaks```
@@ -103,13 +105,12 @@ Tweak tools
 Vscode
 
 ```sudo apt install -y code```
+
 VLC
 
 ```sudo apt install -y vlc```
 
-* Iosevka font
-
-* Ulauncher
+Ulauncher
 
 ```
 sudo add-apt-repository ppa:agornostal/ulauncher
@@ -122,7 +123,7 @@ sudo apt install ulauncher
 ```pip install pint```
 
 
-### Flatpack
+### Flatpack / snap
 
 * Dropbox
 * spotify
@@ -130,6 +131,15 @@ sudo apt install ulauncher
 
 
 ## pop os setup
+
+If distro is not pop os, the pop os shell can be installed to get the tiling
+capabilities of pop os.
+
+```
+git clone https://github.com/pop-os/shell.git
+cd shell
+make local-install
+```
 
 setup keybinds
 
@@ -141,7 +151,6 @@ setup keybinds
 * Change to fixed number of workspaces
 * in keybindings change launch terminal to `ctrl + enter` and disable "launch and switch applications"
 * Change wallpaper
-* Set to Nordic theme
 * Automatically delete recent files and trash
 * Set screen of time
 * Set up night mode
@@ -156,11 +165,11 @@ setup keybinds
 
 ## Extensions
 
-* user themes
-* Auto move windows
-* just perfection
-* sound output device chooser
-* sound percentage
-* vitals
-* workspaces bar
-* Dash to panel
+* [user themes](https://extensions.gnome.org/extension/19/user-themes/)
+* [Auto move windows](https://extensions.gnome.org/extension/16/auto-move-windows/)
+* [just perfection](https://extensions.gnome.org/extension/3843/just-perfection/) Deactivate Activities button
+* [vitals](https://extensions.gnome.org/extension/1460/vitals/)
+* [Workspaces indicator by open apps](https://extensions.gnome.org/extension/5967/workspaces-indicator-by-open-apps/)
+* [Dash to panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
+* [Aylur's widgets](https://extensions.gnome.org/extension/5338/aylurs-widgets/)
+

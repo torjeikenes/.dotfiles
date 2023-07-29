@@ -14,44 +14,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
-Plugin 'tmhedberg/SimpylFold'
-Plugin 'vim-scripts/indentpython.vim'
-Bundle 'Valloric/YouCompleteMe'
+"Plugin 'tmhedberg/SimpylFold'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'terryma/vim-expand-region'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'junegunn/goyo.vim'
-Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'JamshedVesuna/vim-markdown-preview'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-" Plugin 'garbas/vim-snipmate'
-Plugin 'alvan/vim-closetag'
-Plugin 'jplaut/vim-arduino-ino'
-Plugin 'dhruvasagar/vim-table-mode'
-Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-pencil'
-Plugin 'suan/vim-instant-markdown'
-Plugin 'aperezdc/vim-template'
-Plugin 'fmoralesc/vim-pad'
-Plugin 'ap/vim-css-color'
-Plugin 'morganp/vim-projector'
 Plugin 'chriskempson/base16-vim'
-Plugin 'vimwiki/vimwiki'
-Plugin 'lervag/vimtex'
-Plugin 'SirVer/ultisnips'
-Plugin 'stevearc/vim-arduino'
-Plugin 'honza/vim-snippets'
-Plugin 'ervandew/supertab'
 
 
     " All of your Plugins must be added before the following line
@@ -68,7 +38,6 @@ Plugin 'ervandew/supertab'
     nnoremap <Leader>b :setlocal spell spelllang=nb<CR>
     nnoremap <Leader>y :setlocal spell spelllang=nn<CR>
     nnoremap <Leader>u :setlocal spell spelllang=en_us<CR>
-    nnoremap <Leader>t :NERDTreeToggle<CR>
 
     vmap <Leader>y "+y
     vmap <Leader>d "+d
@@ -174,7 +143,7 @@ Plugin 'ervandew/supertab'
 
     " }}}
     " NERDTree {{{
-    map <C-n> :NERDTreeToggle<CR>
+    map <C-t> :NERDTreeToggle<CR>
     " }}}
     " UI {{{
     set nu
@@ -226,95 +195,4 @@ Plugin 'ervandew/supertab'
     set foldlevel=0
     set modelines=1
     " }}}
-    " VimWiki {{{
-    " let g:vimwiki_list = [{'path': '$HOME/Dropbox/notes', "path_html": '~/Dropbox/notes/notes_html/index.html', "syntax": 'markdown', "ext": '.md'}]
-
-    let g:vimwiki_list = [{"path": '$HOME/Dropbox/skole/notes', "path_html": '$HOME/Dropbox/skole/notes_html', "syntax": 'markdown', "ext": '.md', "css_file": '$HOME/Dropbox/skole/notes_html/style.css'}]
-
-    let vim_markdown_preview_github=1
-    let vim_markdown_preview_hotkey= '<leader>p'
-    " }}}
-    " Fonts {{{
-    if has('gui_running')
-      set guifont=Consolas:h10
-    endif  
-    set nospell
-    " }}}
-    " Swap File{{{
-    set shortmess+=A
-    " }}}
-    " Hardmode{{{
-    autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-    nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
-    " }}}
-    " Vim Pencil{{{
-    set nocompatible
-    filetype plugin on       " may already be in your .vimrc
-
-    let g:pencil#wrapModeDefault = 'soft'   " default is 'hard'
-    let g:pencil#textwidth = 74
-
-    augroup pencil
-      autocmd!
-      autocmd FileType markdown,md  call pencil#init()
-      autocmd FileType text,txt         call pencil#init({'wrap': 'hard'})
-    augroup END
-    " }}}
-    " Tables{{{
-    let g:table_mode_corner_corner = '|'
-    let g:table_mode_header_fillchar = '-'
-    let g:table_mode_corner='|'
-
-    function! s:isAtStartOfLine(mapping)
-      let text_before_cursor = getline('.')[0 : col('.')-1]
-      let mapping_pattern = '\V' . escape(a:mapping, '\')
-      let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
-      return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
-    endfunction
-
-    inoreabbrev <expr> <bar><bar>
-              \ <SID>isAtStartOfLine('\|\|') ?
-              \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
-    inoreabbrev <expr> __
-              \ <SID>isAtStartOfLine('__') ?
-              \ '<c-o>:silent! TableModeDisable<cr>' : '__'
-
-    " }}}
-    " notes{{{
-    let g:pad#dir = "~/notes/notestest"
-    let g:pad#local_dir = "notestest"
-    let g:pad#default_format = "markdown"
-
-
-    " }}}
-
-    " Latex{{{
-    let g:tex_flavor='latex'
-    let g:vimtex_view_method='zathura'
-    let g:vimtex_quickfix_mode=0
-    set conceallevel=1
-    let g:tex_conceal='abdmg'
-    let g:vimtex_latexmk_options='-output-directory=build'
-
-    " }}}
-    " Ultisnips{{{
-    " let g:UltiSnipsExpandTrigger = '<tab>'
-    " let g:UltiSnipsJumpForwardTrigger = '<tab>'
-    " let g:UltiSnipsJumpBackwardTrigger = '<s-tab>'
-    "let g:UltiSnipsExpandTrigger="<leader>s"
-    "let g:UltiSnipsJumpForwardTrigger="<c-b>"
-    "let g:UltiSnipsJumpBackwardTrigger="<c-z>"
     
-    " make YCM compatible with UltiSnips (using supertab)
-    let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-    let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
-    let g:SuperTabDefaultCompletionType = '<C-n>'
-
-    " better key bindings for UltiSnipsExpandTrigger
-    let g:UltiSnipsExpandTrigger = "<tab>"
-    let g:UltiSnipsJumpForwardTrigger = "<tab>"
-    let g:UltiSnipsJumpBackwardTrigger = "<leader>k"
-
-    let g:UltiSnipsSnippetsDir = "~/.vim/ultisnips/UltiSnips"
-    let g:UltiSnipsEditSplit="vertical"
-    " }}}

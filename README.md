@@ -28,6 +28,28 @@ flatpak update
 sudo reboot now
 ```
 
+### Install programs 
+
+```sudo apt install snapd zsh vim git cmake gnome-tweaks code vlc```
+
+
+
+### Setup terminal
+
+```sudo apt install zsh```
+
+```chsh -s $(which zsh)```
+
+log out and back in
+
+```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
+
+```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
+
+```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
+
+
+
 ## Install dotfiles
 
 
@@ -65,27 +87,13 @@ config commit -m "Add bashrc"
 config push
 ```
 
-### Setup terminal
-
-```sudo apt install zsh```
-
-```chsh -s $(which zsh)```
-
-log out and back in
-
-```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-
-```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
-
-```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
-
 
 #### Setup vim
 
 
-```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
-
 ```sudo apt install vim```
+
+```git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim```
 
 
 in vim:
@@ -94,21 +102,26 @@ in vim:
 
 * YouCompleteme: https://github.com/Valloric/YouCompleteMe#full-installation-guide
 
+```sudo apt install cmake```
+
+```cd ~/.vim/bundle/YouCompleteMe ```
+
+``` ./install.py --clangd-completer --rust-completer```
 
 
-## Other installations 
+### Notion
 
-Tweak tools
+```
+echo "deb [trusted=yes] https://apt.fury.io/notion-repackaged/ /" | sudo tee /etc/apt/sources.list.d/notion-repackaged.list
 
-```sudo apt install gnome-tweaks```
+sudo apt update
 
-Vscode
+sudo apt install notion-app-enhanced
+// or
+sudo apt install notion-app
 
-```sudo apt install -y code```
 
-VLC
-
-```sudo apt install -y vlc```
+```
 
 Ulauncher
 
@@ -156,12 +169,15 @@ setup keybinds
 * Set up night mode
 * Set mouse settings
 * Set 24 h format
+* Show battery percentage
+
 
 ### Tweaks
 
 * Add week numbers to calendar
 * Set theme
 * Set startup applications
+* Windows -> Focus on hover
 
 ## Extensions
 
@@ -172,4 +188,6 @@ setup keybinds
 * [Workspaces indicator by open apps](https://extensions.gnome.org/extension/5967/workspaces-indicator-by-open-apps/)
 * [Dash to panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 * [Aylur's widgets](https://extensions.gnome.org/extension/5338/aylurs-widgets/)
+* [Bluetooth Quick
+  Connect]{https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/}
 

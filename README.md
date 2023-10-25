@@ -30,7 +30,7 @@ sudo reboot now
 
 ### Install programs 
 
-```sudo apt install snapd zsh vim git cmake gnome-tweaks code vlc```
+```sudo apt install snapd zsh vim git cmake gnome-tweaks code vlc gh``` 
 
 
 
@@ -86,6 +86,16 @@ config add .bashrc
 config commit -m "Add bashrc"
 config push
 ```
+
+### Setup gh to push
+
+
+```
+gh auth login
+
+config push --set-upstream origin master
+```
+
 
 
 #### Setup vim

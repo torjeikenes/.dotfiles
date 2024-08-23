@@ -1,8 +1,10 @@
 # Dotfiles
 
+* Regolith
 * pop os
 * zsh
 * vim
+* nvim
 * vscode
 
 
@@ -30,7 +32,7 @@ sudo reboot now
 
 ### Install programs 
 
-```sudo apt install snapd zsh vim git cmake gnome-tweaks code vlc gh``` 
+```sudo apt install snapd zsh vim git cmake gnome-tweaks code vlc gh tmux``` 
 
 
 
@@ -42,16 +44,18 @@ sudo reboot now
 
 log out and back in
 
-```sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"```
-
-```git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions```
-
-```git clone https://github.com/chriskempson/base16-shell.git ~/.config/base16-shell ```
-
-
 
 ## Install dotfiles
 
+requires ```stow```
+
+```
+git clone --bare https://github.com/torjeikenes/.dotfiles $HOME/.dotfiles
+cd .dotfiles
+stow .
+```
+
+### Previous implementation 
 
 https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
 
@@ -87,7 +91,7 @@ config commit -m "Add bashrc"
 config push
 ```
 
-### Setup gh to push
+#### Setup gh to push
 
 
 ```
@@ -97,8 +101,23 @@ config push --set-upstream origin master
 ```
 
 
+## Neovim
 
-#### Setup vim
+[Install neovim](https://github.com/neovim/neovim/blob/master/INSTALL.md#linux)
+
+
+Show plugins in nvim:
+
+```:Lazy```
+
+## Tmux
+
+Install packages in tmux
+
+```<C-b> I```
+
+
+## Setup vim
 
 
 ```sudo apt install vim```
@@ -153,7 +172,95 @@ sudo apt install ulauncher
 * extension manager
 
 
-## pop os setup
+## Regolith setup
+
+https://regolith-desktop.com/docs/using-regolith/install/
+
+### packages
+
+Look
+
+```
+regolith-look-nord
+```
+
+i3xrocks packages
+
+```
+i3xrocks-app-launcher
+i3xrocks-battery
+i3xrocks-cpu-usage
+i3xrocks-info
+i3xrocks-memory
+i3xrocks-net-traffic
+i3xrocks-time
+i3xrocks-volume
+```
+
+all installed regolith packages 
+
+```
+arc-icon-theme
+ayu-theme
+fonts-nerd-font-bitstreamverasansmono
+fonts-nerd-font-robotomono
+i3-next-workspace
+i3-swap-focus
+i3-wm
+i3xrocks-app-launcher
+i3xrocks-battery
+i3xrocks-cpu-usage
+i3xrocks-info
+i3xrocks-memory
+i3xrocks-net-traffic
+i3xrocks-time
+i3xrocks-volume
+i3xrocks
+ilia
+nordic
+picom
+regolith-compositor-picom-glx
+regolith-control-center
+regolith-default-settings
+regolith-desktop
+regolith-ftue
+regolith-i3-compositor
+regolith-i3-control-center-regolith
+regolith-i3-default-style
+regolith-i3-gaps
+regolith-i3-i3xrocks
+regolith-i3-ilia
+regolith-i3-root-config
+regolith-i3-session
+regolith-i3-unclutter
+regolith-i3xrocks-config
+regolith-look-default-loader
+regolith-look-default
+regolith-look-nord
+regolith-session-common
+regolith-session-flashback-ext
+regolith-session-flashback
+regolith-unclutter-xfixes
+regolith-wm-base-launchers
+regolith-wm-config
+regolith-wm-ftue
+regolith-wm-navigation
+regolith-wm-networkmanager
+regolith-wm-next-workspace
+regolith-wm-resize
+regolith-wm-swap-focus
+regolith-wm-workspace-config
+remontoire
+trawlcat
+trawld
+xrescat
+
+```
+
+
+
+
+## pop os setup (Previously used)
 
 If distro is not pop os, the pop os shell can be installed to get the tiling
 capabilities of pop os.

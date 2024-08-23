@@ -305,6 +305,5 @@ setup keybinds
 * [Workspaces indicator by open apps](https://extensions.gnome.org/extension/5967/workspaces-indicator-by-open-apps/)
 * [Dash to panel](https://extensions.gnome.org/extension/1160/dash-to-panel/)
 * [Aylur's widgets](https://extensions.gnome.org/extension/5338/aylurs-widgets/)
-* [Bluetooth Quick
-  Connect]{https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/}
+* [Bluetooth Quick Connect](https://extensions.gnome.org/extension/1401/bluetooth-quick-connect/)
 

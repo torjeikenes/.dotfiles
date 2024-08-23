@@ -1,0 +1,19 @@
+
+regolith.wallpaper.file: ~/Dropbox/03 bilder/wallpaper/angledWaves.png
+
+wm.gaps.focus_follows_mouse: yes
+
+
+! --------------------------------------------
+! -- Fonts
+! --------------------------------------------
+
+#define gtk_font_name Fira Sans Book 11
+#define gtk_document_font_name Sans 11
+#define gtk_monospace_font_name RobotoMono Nerd Font 11
+
+gtk.font_name: gtk_font_name
+gtk.document_font_name: gtk_document_font_name
+gtk.monospace_font_name: gtk_monospace_font_name
+
+regolith.look.path: /usr/share/regolith-look/nord

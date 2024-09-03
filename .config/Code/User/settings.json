@@ -2,11 +2,13 @@
     "C_Cpp.updateChannel": "Insiders",
     "editor.lineNumbers": "relative",
     "git.autofetch": true,
-    "workbench.colorTheme": "One Dark Pro",
     "editor.rulers": [
         80
     ],
     "python.defaultInterpreterPath": "/usr/bin/python3",
     "verilog.linting.linter": "iverilog",
-    "editor.formatOnSave": true
+    "update.showReleaseNotes": false,
+    "search.useIgnoreFiles": false,
+    "github.copilot.editor.enableAutoCompletions": true,
+    "editor.renderWhitespace": "all"
 }

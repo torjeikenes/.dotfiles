@@ -32,9 +32,17 @@ sudo reboot now
 
 ### Install programs 
 
-```sudo apt install snapd zsh vim git cmake gnome-tweaks code vlc gh tmux``` 
+development
 
+```sudo apt install zsh vim git cmake code gh tmux curl fzf ripgrep``` 
 
+Other
+
+```sudo apt install vlc gnome-tweaks``` 
+
+Note: nvim from apt in ubuntu 24.04 is old, so instead install from pre-built archives:
+
+https://github.com/neovim/neovim/blob/master/INSTALL.md#pre-built-archives-2
 
 ### Setup terminal
 
@@ -50,45 +58,9 @@ log out and back in
 requires ```stow```
 
 ```
-git clone --bare https://github.com/torjeikenes/.dotfiles $HOME/.dotfiles
+git clone https://github.com/torjeikenes/.dotfiles $HOME/.dotfiles
 cd .dotfiles
 stow .
-```
-
-### Previous implementation 
-
-https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/
-
-```
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo ".dotfiles" >> .gitignore
-git clone --bare https://github.com/torjeikenes/.dotfiles $HOME/.dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-config checkout
-```
-if checkout failes its because you have other config files that would be overwritten 
-to solve this do this:
-
-```
-mkdir -p .config-backup && \
-config checkout 2>&1 | egrep "\s+\." | awk {'print $1'} | \
-xargs -I{} mv {} .config-backup/{}
-config checkout
-```
-
-```
-config config --local status.showUntrackedFiles no
-```
-
-now you should be able to use the config command to add and update your dotfiles
-
-```
-config status
-config add .vimrc
-config commit -m "Add vimrc"
-config add .bashrc
-config commit -m "Add bashrc"
-config push
 ```
 
 #### Setup gh to push
@@ -100,6 +72,11 @@ gh auth login
 config push --set-upstream origin master
 ```
 
+## Tmux
+
+Install packages in tmux
+
+```<C-b> I```
 
 ## Neovim
 
@@ -110,14 +87,8 @@ Show plugins in nvim:
 
 ```:Lazy```
 
-## Tmux
 
-Install packages in tmux
-
-```<C-b> I```
-
-
-## Setup vim
+## Setup vim (instead of neovim)
 
 
 ```sudo apt install vim```

@@ -87,6 +87,31 @@ Show plugins in nvim:
 
 ```:Lazy```
 
+### Bear
+clangd used by the neovim lsp requires a ```compile_commands.json``` file. This can be generated with [Bear](https://github.com/rizsotto/Bear).
+Apparently V3.x does not work with bitbake, so we can compile 2.4.4
+
+```
+git clone https://github.com/rizsotto/Bear.git
+cd Bear/
+git checkout 2.4.4
+mkdir build
+cd build
+cmake ..
+make all
+sudo make install
+```
+and generate the file with
+
+```
+bear <make command>
+```
+
+for example (yocto)
+
+```
+bear devtool build-image <name>-image 
+```
 
 ## Setup vim (instead of neovim)
 

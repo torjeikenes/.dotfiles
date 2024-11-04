@@ -6,6 +6,19 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+# Exports
+
+export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH=$PATH:$HOME/bin
+
+#export ARCH=arm
+#export CROSS_COMPILE=arm-linux-gnueabi-
+
+# set default terminal in git to nvim
+export EDITOR=nvim
+export VISUAL=nvim
+
 #source "${HOME}/.zsh/colors"
 
 # Source/Load zinit
@@ -80,10 +93,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 
-# Exports
-
-export PATH="$PATH:$HOME/.local/bin"
-export PATH=$PATH:$HOME/bin
-
-export ARCH=arm
-export export CROSS_COMPILE=arm-linux-gnueabi-
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

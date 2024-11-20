@@ -88,8 +88,7 @@ alias cd..='cd ..'
 alias l='ls -F'
 alias ll='ls -laF'
 alias lsa='ls -a'
-
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gg='git log --graph --oneline --all'
 
 #eval "$(fzf --zsh)"
 

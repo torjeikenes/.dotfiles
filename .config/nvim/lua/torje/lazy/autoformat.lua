@@ -1,5 +1,13 @@
 local format_on_save_enabled = true
 
+Format_status = function()
+	if format_on_save_enabled then
+		return "[Fmt: On]"
+	else
+		return "[Fmt: Off]"
+	end
+end
+
 return { -- Autoformat
 	"stevearc/conform.nvim",
 	event = { "BufWritePre" },

@@ -12,8 +12,8 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:/opt/nvim-linux64/bin"
 export PATH=$PATH:$HOME/bin
 
-#export ARCH=arm
-#export CROSS_COMPILE=arm-linux-gnueabi-
+export ARCH=arm
+export CROSS_COMPILE=arm-linux-gnueabi-
 
 # set default terminal in git to nvim
 export EDITOR=nvim
@@ -89,6 +89,9 @@ alias l='ls -F'
 alias ll='ls -laF'
 alias lsa='ls -a'
 alias gg='git log --graph --oneline --all'
+
+# Get the time of todays logins. Useful for logging hours worked
+alias first_login='journalctl --since today  | grep "gkr-pam: unlocked login keyring"'
 
 #eval "$(fzf --zsh)"
 
